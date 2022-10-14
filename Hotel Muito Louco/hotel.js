@@ -698,7 +698,7 @@ function aluguel_arCondicionado(){  // CALCULA O PREÇO DE MANUNTENÇÃO DE AR C
         var menor_empresa;      //Variavel para armazenar a empresa que tiver o menor custo de serviço
         let menor_custo = 100000000000;     //Variavel para armazenar o menor custo da empresa, inicialmente ela armazena um alto valor para depois ser feita a comparação na condicional com operador logico e armazenar em seguida em valor abaixo e seguir fazendo a substituição por um valor menor
 
-        let insercao_novosDados;      //Variavel para receber resposta do usuario para inserir novos dados ou não
+        let insercao_novosDados = "S";      //Variavel para receber resposta do usuario para inserir novos dados ou não
 
         do{                           //Laço de repetição para repetir conforme a resposta do usuario, enquanto for "S" irá executar o laço se não deixa de executar
 
@@ -766,7 +766,7 @@ function aluguel_arCondicionado(){  // CALCULA O PREÇO DE MANUNTENÇÃO DE AR C
 
             insercao_novosDados = prompt("Deseja informar novos dados? (S/N)");         //Exibe um prompt para usuario perguntando se deseja inserir novos dados
 
-                while(insercao_novosDados != "S" || insercao_novosDados != "N"){       //Laço de repetição para verificar dados da resposta de novos dados e receber uma resposta valida, enquanto não for enviada uma resposta valida o laço continuara executando
+                while(insercao_novosDados == "" || insercao_novosDados == Number){       //Laço de repetição para verificar dados da resposta de novos dados e receber uma resposta valida, enquanto não for enviada uma resposta valida o laço continuara executando
 
                     alert("Dado inválido. Se deseja inserir novos dados digite 'S', se não digite 'N' ");       //Exibe uma mensagem de erro com uma orientação ao usuario
                     insercao_novosDados = prompt("Deseja informar novos dados? (S/N)");             //recebe uma nova resposta
